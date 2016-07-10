@@ -45,4 +45,69 @@ soon how useful variables are. Do the same to your square programme!
 You will need to click the \lq{}Make a variable\rq{} button to add a
 variable; add it for all sprites, we'll only be using one sprite at a
 time in this class.
+
+This programme does something slighly more useful with a variable, it
+goes forward a certain number steps, turns, then goes forward half as
+far as before. Now, rather than having to put in the number of steps,
+then work out half and put that in, it uses a variable for the number
+of steps and another one to calculate half the number. 
+\begin{center}
+\includegraphics{line_half_line.png}
+\end{center}
+Try modifying your programme in a similar way so that it draws an
+$n$-gon, notice that turning 90 degrees each time won't give an
+$n$-gon, so you'll need to use a variable to instruct it to turn
+\begin{equation}
+\theta=\frac{360}{n}
+\end{equation}
+degrees each time.
+
+In this programme the variable is changed in the \textsl{loop} so the
+line is shorter each time:
+\begin{center}
+\includegraphics{spiral.png}
+\end{center}
+giving a spiral
+\begin{center}
+\includegraphics{spiral_pic.png}
+\end{center}
+Try modifying your programme in the same way so that you get smaller and smaller squares retreating into one corner, like this
+\begin{center}
+\includegraphics{repeat_squares_pic.png}
+\end{center}
+If you want to you can try playing with you program a bit to give other patterns, like this
+\begin{center}
+\includegraphics{squares_spiral_pic.png}
+\end{center}
+
+This next programme draws a star
+\begin{center}
+\includegraphics{star.png}
+\end{center}
+Input it and have a look and then try to understand it; it is intended
+to illustrate the idea of conditional statements. There are two, first
+the \textsl{repeat until}. This is similar to the repeat we used
+before, but now, instead of repeating a set number of times, every
+time it repeats it checks a condition, in this case \texttt{x=19}; if
+the condition is true, it stops, otherwise it keeps repeating. In our
+case one gets added to \texttt{x} each time, so eventually it will
+stop. The other conditional statement is the \texttt{if . . . else}
+statement. Because the star has two different angles we need two
+different sorts of turns, in the if statement it does the first
+possibility, turning 175 degrees if \texttt{x mod 2 = 0} and the other
+otherwise. The meaning of \textsl{mod} is that it gies the remainder
+after dividing, so \texttt{x mod 2} means the remainder after dividing
+\texttt{x} by 2; this will be zero if \texttt{x} is even, odd
+otherwise. 
+
+You can mess with programme a bit, maybe changing the angles or putting the whole thing in a loop to give something like this
+\begin{center}
+\includegraphics{rotating_star_pic.png}
+\end{center}
+Finally have a look at this programme:
+\begin{center}
+\includegraphics{center_rays.png}
+\end{center}
+It also has a conditional statement, but the condition is something outside the programme, in this case touching the edge.
+
 \end{document}

@@ -100,14 +100,50 @@ after dividing, so \texttt{x mod 2} means the remainder after dividing
 \texttt{x} by 2; this will be zero if \texttt{x} is even, odd
 otherwise. 
 
-You can mess with programme a bit, maybe changing the angles or putting the whole thing in a loop to give something like this
+You can mess with programme a bit, maybe changing the angles or
+putting the whole thing in a loop to give something like this
 \begin{center}
 \includegraphics{rotating_star_pic.png}
 \end{center}
-Finally have a look at this programme:
+Next have a look at this programme:
 \begin{center}
 \includegraphics{center_rays.png}
 \end{center}
-It also has a conditional statement, but the condition is something outside the programme, in this case touching the edge.
+It also has a conditional statement, but the condition is something
+outside the programme, in this case touching the edge.
 
+Imagine you want to use the same commands a few times; in this
+programme for example we draw a square, move over a bit and draw
+another:
+\begin{center}
+\includegraphics{two_squares.png}
+\end{center}
+This is annoying, again, the extra typing, but also, as we discussed
+before, it isn't as readable as it could be; each time you get to the
+square drawing piece you need to work out what it is. Most programming
+languages get around this with \textsl{functions} and the block
+programming language we are using here has functions, it calls them
+\textsl{blocks}. A block is a piece of code with a name. Here we will
+make a block called square that draws a square: the block commands are
+at the bottom of the variable menu:
+\begin{center}
+\includegraphics{two_squares_block_block.png}
+\end{center}
+This block draws a square, so our two square code becomes a bit
+neater, quicker to input and easier to read:
+\begin{center}
+\includegraphics{two_squares_block.png}
+\end{center}
+You can make your blocks more flexible by adding \textsl{arguments};
+these are variables that work inside the block that you can send from
+the main programme, you make them by clicking the plus by the block
+name.
+\begin{center}
+\includegraphics{two_squares_block_size_block.png}
+\end{center}
+and
+\begin{center}
+\includegraphics{two_squares_block_size_block.png}
+\end{center}
+draws the two squares different sizes. Try rewriting your original shrinking square code with blocks.
 \end{document}

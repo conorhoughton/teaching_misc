@@ -10,30 +10,31 @@
 \begin{document}
 \subsection*{Introduction}
 Here is a simple turtle programme (\texttt{turtle\_doing\_nothing.py}):
-\begin{lstlisting}[numbers=right]
+\begin{lstlisting}[numbers=left]
 from turtle import *
 
 tom=Turtle()
 
-tom.getscreen().\_root.mainloop()
+tom.getscreen()._root.mainloop()
 \end{lstlisting}
 Lines 1 and 5 aren't worth spending much time on at first, the first
 line imports the library of commands related to turtle, line 7
 prevents the computer from closing the graphics window when the
-programme has finished running. Line 3 is important, it tells the
-computer to make an object, in this case a \turtle and call it
-\texttt{tom}, it knows what a \turtle is from the library it
-imported in line 1; in the instructions on what to do when making a \turtle the computer is told to open a graphics window and to draw the turtle,  a little arrow shape.
+programme has finished running; we won't include this line again,
+though it is needed. Line 3 is important, it tells the computer to
+make an object, in this case a \turtle and call it \texttt{tom}, it
+knows what a \turtle is from the library it imported in line 1; in the
+instructions on what to do when making a \turtle the computer is told
+to open a graphics window and to draw the turtle, a little arrow
+shape.
 
 Here is a simple turtle programme (\texttt{line.py}):
-\begin{lstlisting}[numbers=right]
+\begin{lstlisting}[numbers=left]
 from turtle import *
 
 tom=Turtle()
 
 tom.forward(100)
-
-tom.getscreen().\_root.mainloop()
 \end{lstlisting}
 The extra line, line 7, tells the turtle to move forward by 100 units, this is an important piece of Python, to tell an object to do something you use a dot followed by the command, of course, the command has to make sense for whatever type of object it is dotted onto, but here it does, forward is one of the defined commands for a \turtle object. 
 \end{document}

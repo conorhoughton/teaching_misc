@@ -1,0 +1,5 @@
+import turtle
+
+turtle t
+
+t.forward(10)

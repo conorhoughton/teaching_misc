@@ -14,7 +14,7 @@ tom.right(90)
 
 #these two lines are for saving the image
 ts = tom.getscreen()
-ts.getcanvas().postscript(file="right_angle.eps")
+ts.getcanvas().postscript(file="square.eps")
 
 tom.getscreen()._root.mainloop()
 

@@ -15,25 +15,28 @@ def angle(side,ratio):
 
 tom=Turtle()
 
+tom.penup()
+tom.goto(x=-150,y=150)
+tom.pendown()
+
 n=100
 side=350.
 ratio=0.95
 color=1.
 
 for i in range(0,n):
-    actual_color=1-(0.1+0.9*color)
+    actual_color=1-color
     tom.pencolor((actual_color,actual_color,actual_color))
     square(side)
     tom.forward((1-ratio)*side)
     tom.right(angle(side,ratio))
     side=new_length(side,ratio)
     color*=ratio
-tom.penup()
-tom.forward(350)
+tom.hideturtle()
 
 #these two lines are for saving the image
 ts = tom.getscreen()
-ts.getcanvas().postscript(file="polygon.eps")
+ts.getcanvas().postscript(file="vanishing_square.eps")
 
 tom.getscreen()._root.mainloop()
 

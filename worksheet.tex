@@ -183,6 +183,46 @@ two places, but in a more complex programme there may be many places a
 value needs to be changed, leading to errors. Furthermore, keeping
 \texttt{n} seperate makes the programme easier to understand.
 
+Along with loops, the other important control statement is the
+\texttt{if}. Consider a programme for drawing a star:
+\begin{center}
+\fbox{
+\includegraphics[width=10cm]{code/star.eps}}
+\end{center}
+The programme is
+\begin{lstlisting}[numbers=left]
+from turtle import *
+
+tom=Turtle()
+
+for i in range(0,10):
+    tom.forward(100)
+    if i%2==0:
+        tom.right(144)
+    else:
+        tom.left(72)
+\end{lstlisting}
+The star has two different angles, every second line either has a
+right turn of $144^\circ$ or a left turn of $72^\circ$. The
+\texttt{if} on \lnn{7} decides which to do, basically \texttt{i\%2} is
+the remainder you get if you divide \texttt{i} by two, so it is zero
+if \texttt{i} is even and one if it is odd. Now \texttt{i\%2==0} tests
+is \texttt{i\%2} is equal zero, the \texttt{==} is \lq{}is equal\rq{},
+the \texttt{i\%2==0} returns true of false. In the if command, the
+\texttt{if} is followed by a statement, if the statement is true, the
+programme runs the code belonging to the if, if the statement is
+false, it skips it. As ever, in Python, the indent is used to show
+belonging. An if command needn't have an else, but this one does, the
+code belonging to \texttt{else} runs if the statement in the
+\texttt{if} is false. All this means \texttt{tom} does one turn for
+even \texttt{i} and another for odd. QUESTION: can you modify the code
+to give a six-pointed star, the two angles you need are $120^\circ$
+and $60^\circ$
+\begin{center}
+\fbox{
+\includegraphics[width=10cm]{code/six_star.eps}}
+\end{center}
+
 Now imagine you wanted to draw this:
 \begin{center}
 \fbox{
@@ -252,8 +292,12 @@ QUESTION: can you guess how this was drawn:
 \end{center}
 The \turtle commands \texttt{penup()} and \texttt{pendown()} lift and
 drop the turtle's pen, when the pen is up the turtle moves without
-leaving a line.
-
+leaving a line; \texttt{hideturtle()} hides the turtle (\texttt{many\_polygons\_extra.py})
+A more complicated example (\texttt{vanishing\_square.py})
+\begin{center}
+\fbox{
+\includegraphics[width=10cm]{code/vanishing_square.eps}}
+\end{center}
 
 \end{document}
 

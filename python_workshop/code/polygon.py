@@ -13,5 +13,6 @@ for i in range(0,n):
 ts = tom.getscreen()
 ts.getcanvas().postscript(file="polygon.eps")
 
+#this is needed in some situations to keep the turtle console open
 tom.getscreen()._root.mainloop()
 

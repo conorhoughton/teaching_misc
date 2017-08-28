@@ -10,5 +10,6 @@ for i in range(0,30):
 ts = tom.getscreen()
 ts.getcanvas().postscript(file="spiral2.eps")
 
+#this is needed in some situations to keep the turtle console open
 tom.getscreen()._root.mainloop()
 

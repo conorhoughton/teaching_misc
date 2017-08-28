@@ -32,11 +32,14 @@ for i in range(0,n):
     tom.right(angle(side,ratio))
     side=new_length(side,ratio)
     color*=ratio
+
+#this hides the turtle
 tom.hideturtle()
 
 #these two lines are for saving the image
 ts = tom.getscreen()
 ts.getcanvas().postscript(file="vanishing_square.eps")
 
+#this is needed in some situations to keep the turtle console open
 tom.getscreen()._root.mainloop()
 

@@ -18,10 +18,14 @@ for i in range(0,repeats):
     tom.penup()
     tom.forward(75)
     tom.pendown()
+
+#this hides the turtle
 tom.hideturtle()
+
 #these two lines are for saving the image
 ts = tom.getscreen()
 ts.getcanvas().postscript(file="many_polygons_extra.eps")
 
+#this is needed in some situations to keep the turtle console open
 tom.getscreen()._root.mainloop()
 

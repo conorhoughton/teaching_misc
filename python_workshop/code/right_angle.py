@@ -10,5 +10,6 @@ tom.forward(100)
 ts = tom.getscreen()
 ts.getcanvas().postscript(file="right_angle.eps")
 
+#this is needed in some situations to keep the turtle console open
 tom.getscreen()._root.mainloop()
 

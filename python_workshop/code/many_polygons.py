@@ -13,7 +13,7 @@ repeats=8
 polygon_sides=5
 
 for i in range(0,repeats):
-    polygon(5)
+    polygon(polygon_sides)
     tom.right(360.0/repeats)
 
 

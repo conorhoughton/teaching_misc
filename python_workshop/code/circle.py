@@ -3,7 +3,7 @@ from turtle import *
 tom=Turtle()
 
 radius=100
-step_size=2*3.141592*100/360
+step_size=2*3.141592*radius/360
 
 
 for i in range(0,360):

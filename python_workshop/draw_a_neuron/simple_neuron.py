@@ -51,11 +51,12 @@ for i in range(45):
     jacob.right(turns.pop())
 
 jacob.setheading(90)
-branch_n=5
-factor=0.8
-dendrite(150,7,5,0.8,60,jacob)
+dendrite(150,7,7,0.7,60,jacob)
 
-#jacob.goto(x=0,y=-150)
+jacob.hideturtle()
+
+ts = jacob.getscreen()
+ts.getcanvas().postscript(file="neuron.eps")
 
 
 jacob.getscreen()._root.mainloop()

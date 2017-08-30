@@ -15,7 +15,7 @@ def bendy_line(length,jacob):
 
 def dendrite(length,width,branch_n,factor,sigma,jacob):
     
-    if width==0:
+    if width<1:
         return
 
     jacob.width(width)
@@ -35,7 +35,7 @@ def dendrite(length,width,branch_n,factor,sigma,jacob):
         bendy_line(next_branch,jacob)
         angle=get_angle(sigma)
         jacob.right(angle)
-        dendrite(length*factor,width-1,branch_n,factor,sigma,jacob)
+        dendrite(length*factor,width-2,branch_n,factor,sigma,jacob)
         jacob.left(angle)
     
         branches=[b-next_branch for b in branches if b!=next_branch]
@@ -46,7 +46,7 @@ def dendrite(length,width,branch_n,factor,sigma,jacob):
     jacob.setx(x)
     jacob.sety(y)
     jacob.setheading(heading)
-    jacob.width(width+1)
+    jacob.width(width+2)
     jacob.pendown()
     return
 

@@ -6,7 +6,7 @@
 \pagestyle{headings}
 \newcommand{\lnn}[1]{\textbf{line #1}\,}
 \newcommand{\Lnn}[1]{\textbf{Line #1}\,}
-\markright{Julia introduction - Conor Houghton}
+\markright{Julia introduction}
 \lstdefinelanguage{Julia}%
   {morekeywords={abstract,break,case,catch,const,continue,do,else,elseif,%
       end,export,false,for,function,immutable,import,importall,if,in,%
@@ -29,6 +29,7 @@
 }
 
 \begin{document}
+\section*{Julia Introduction\footnote{\texttt{https://github.com/conorhoughton/teaching\_misc/tree/master/python\_workshop/}}}
 \subsection*{Introduction}
 Julia is a new programming language that runs much faster than Python;
 it is possible to write fast code in MATLAB where everything is
@@ -55,9 +56,12 @@ without even noticing; this is part of why Julia is much faster.
 
 This only outlines the simplest parts of the language, the wikibook
 \begin{quote}
-https://en.wikibooks.org/wiki/Introducing_Julia/
+https://en.wikibooks.org/wiki/Introducing\_Julia/
 \end{quote}
-is a good place to look for a longer introduction.
+is a good place to look for a longer introduction. There is online Julia at
+\begin{quote}
+https://juliabox.com/
+\end{quote}
 
 \subsection*{A simple example}
 
@@ -167,7 +171,8 @@ mutable struct Poem
 end	
 
 function move(cow::Cow)
-	 println(cow.name," walks forward showing the weight of her ",cow.age," years")
+	 print(cow.name," walks forward") 
+         println("showing the weight of her ",cow.age," years")
 end
 
 function move(poem::Poem)
@@ -195,7 +200,7 @@ satisfies
 \begin{equation}
 \tau_m \frac{dv}{dt}=E_l-v+V_I
 \end{equation}
-where $\tau_m$ and $\E_l$ are parameters, and $I$ is some input, in
+where $\tau_m$ and $E_l$ are parameters, and $I$ is some input, in
 fact it is a voltage derived from an input current into the cell;
 $V_I=IR_m$ where $I$ is a current and $R_m$ is the member resistance,
 a property of the cell membrane. Now neurons spike, send out pulses of

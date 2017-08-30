@@ -1,0 +1,34 @@
+\documentclass[11pt,a4paper]{scrartcl}
+\typearea{12}
+\usepackage{graphicx}
+\usepackage{pstricks}
+\usepackage{listings}
+\pagestyle{headings}
+\newcommand{\lnn}[1]{\textbf{line #1}\,}
+\newcommand{\Lnn}[1]{\textbf{Line #1}\,}
+\markright{Draw a Neuron - Conor Houghton}
+\begin{document}
+
+\subsection*{Draw a Neurons\footnote{\texttt{github.com/conorhoughton/teaching_misc/tree/master/python\_workshop}}}
+
+This is a picture drawn by Santiago Ram\'{o}n y Cajal of cells in the human forebrain:
+\begin{center}
+\includegraphics{images/cajal.gif}
+\end{center} 
+It shows two different cell types, A-E are pyramidal cells, F and K are interneurons. These links bring you to some more pictures 
+\begin{itemize}
+\item \texttt{ecee.colorado.edu/~ecen4831/cnsweb/cns2a.html}
+\item \texttt{www.nature.com/nrn/journal/v9/n3/fig\_tab/nrn2286\_F1.html}
+\item \texttt{blogs.scientificamerican.com/brainwaves/know-your-neurons-classifying-the-many-types-of-cells-in-the-neuron-forest/}
+\end{itemize}
+It is intesteresting to consider how these shapes are formed and
+informative to try writing a programme to draw them. In the
+\texttt{draw\_a\_neuron} folder in the github you can see my attempt,
+it makes neurons that look like this:
+\begin{center}
+\fbox{
+\includegraphics[width=10cm]{eps/neuron.eps}}
+\end{center}
+Probably you can do better, have a go; either by modifying my
+programme or writing your own.
+\end{document}

@@ -1,20 +1,4 @@
 
-function update(weights::Array{Float64},pattern)
-    function activation(a::Float64)
-        if a>0
-            return 1
-        end
-        -1
-    end
-
-    new_pattern=weights*pattern
-
-    map(activation,new_pattern)
-
-end
-
-#------------------
-
 function seven_segment(pattern::Array{Int64})
 
     function to_bool(a::Int64)
@@ -67,9 +51,6 @@ function seven_segment(pattern::Array{Int64})
 
     println(number)
         
-
-
-
 end
 
 eight=Int64[1,1,1,1,1,1,1,-1,-1,-1,1]
@@ -82,41 +63,18 @@ seven_segment(one)
 
 #------------------
 
-patterns=[eight,three,one]
-
-pattern_length=11
-
-weights=zeros(Float64,pattern_length,pattern_length)
-
-patterns_n=length(patterns)
-
-
-for pattern in patterns
-    weights+=1.0/patterns_n*pattern*transpose(pattern)
-end
-
-for i in 1:patterns_n
-    weights[i,i]=0.0
-end
-
 println("test1")
 
 test=Int64[1,-1,1,1,-1,1,1,-1,-1,-1,-1]
 
 seven_segment(test)
 
-test=update(weights,test)
-
-seven_segment(test)
-
 println("test2")
+
+#here the network should run printing at each step
 
 test=Int64[-1,1,1,-1,-1,1,1,-1,-1,-1,-1]
 
-old_test=0*test
+seven_segment(test)
 
-while test!=old_test
-    seven_segment(test)
-    old_test=test
-    test=update(weights,test)
-end
+#here the network should run printing at each step

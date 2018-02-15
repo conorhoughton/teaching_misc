@@ -50,7 +50,7 @@ def seven_segment(pattern):
         
 
 
-eight=[1,1,1,1,1,1,1,-1,-1,-1,1]
+six=[1,1,-1,1,1,1,1,-1,1,1,-1]
 three=[1,-1,1,1,-1,1,1,1,1,-1,-1]
 one=[-1,-1,1,-1,-1,1,-1,1,-1,-1,-1]
 
@@ -69,7 +69,7 @@ print("test2")
 
 #here the network should run printing at each step
 
-test=[-1,1,1,-1,-1,1,1,-1,-1,-1,-1]
+test=[1,1,1,1,1,1,1,-1,-1,-1,-1]
 
 seven_segment(test)
 

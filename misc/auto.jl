@@ -72,17 +72,17 @@ function seven_segment(pattern::Array{Int64})
 
 end
 
-eight=Int64[1,1,1,1,1,1,1,-1,-1,-1,1]
+six=Int64[1,1,-1,1,1,1,1,-1,1,1,-1]
 three=Int64[1,-1,1,1,-1,1,1,1,1,-1,-1]
 one=Int64[-1,-1,1,-1,-1,1,-1,1,-1,-1,-1]
 
 seven_segment(three)
-seven_segment(eight)
+seven_segment(six)
 seven_segment(one)
 
 #------------------
 
-patterns=[eight,three,one]
+patterns=[six,three,one]
 
 pattern_length=11
 
@@ -95,7 +95,7 @@ for pattern in patterns
     weights+=1.0/patterns_n*pattern*transpose(pattern)
 end
 
-for i in 1:patterns_n
+for i in 1:pattern_length
     weights[i,i]=0.0
 end
 
@@ -111,7 +111,7 @@ seven_segment(test)
 
 println("test2")
 
-test=Int64[-1,1,1,-1,-1,1,1,-1,-1,-1,-1]
+test=Int64[1,1,1,1,1,1,1,-1,-1,-1,-1]
 
 old_test=0*test
 

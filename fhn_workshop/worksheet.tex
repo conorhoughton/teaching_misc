@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{amsfonts, epsfig}
+
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lfoot{\texttt{github.com/conorhoughton/teaching\_misc/i\_and\_f\_workshop}}
+\lhead{FitzHugh-Nagumo worksheet - Conor}
+\rhead{\thepage}
+\cfoot{}
+\begin{document}
+
+\section*{The FitzHugh-Nagumo model}
+\begin{eqnarray}
+\frac{dv}{dt}&=&v-\frac{1}{3}v^3-w+I\cr
+\tau\frac{dw}{dt}&=&v+a-bw
+\end{eqnarray}
+and some good parameters are  $I=0.5$, $a=0.7$, $b=0.8$, and $\tau=12.5$.
+
+\section*{Fourth order Runge-Kutta}
+
+Here are the fourth order Runge Kutta and will include the
+possibility that the right hand side of the differential equation also
+includes a dependence on $t$ so, writing $t_n=n\delta t$
+\begin{equation}
+\frac{df}{dt}=G(t,f)
+\end{equation}
+Now
+\begin{eqnarray}
+k_1&=&G(t_n,f_n)\cr
+k_2&=&G\left(t_n+\frac{1}{2}\delta t,f_n+\frac{1}{2}\delta tk_1\right)\cr 
+k_3&=&G\left(t_n+\frac{1}{2}\delta t,f_n+\frac{1}{2}\delta tk_2\right)\cr 
+k_4&=&G\left(t_n+\delta t,y_n+\delta tk_2\right) 
+\end{eqnarray}
+and 
+\begin{equation}
+f_{n+1}=f_n+\frac{1}{6}(k_1+2k_2+2k_3+k_4)\delta t
+\end{equation}
+This is written for a single variable but the generalization to more
+variables is as you would expect.
+
+
+\end{document}

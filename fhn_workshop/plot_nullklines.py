@@ -16,9 +16,9 @@ class V_nullkline:
         self.input=input
 
     def __call__(self,v):
-        return v-pow(v,3)+self.input
+        return v-pow(v,3)/3+self.input
 
-input=0.75
+input=0.5
 a=0.7
 b=0.8
 

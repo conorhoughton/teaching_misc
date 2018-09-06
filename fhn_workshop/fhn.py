@@ -7,7 +7,7 @@ class V_dot:
         self.input=input
 
     def __call__(self,v,w):
-        return v-pow(v,3)-w+self.input
+        return v-pow(v,3)/3-w+self.input
 
 
 class W_dot:

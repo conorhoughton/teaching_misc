@@ -11,7 +11,6 @@ for i in range(0,2*n):
     else:
         tom.left(360./n)
 
-#this is needed in some situations to keep the turtle console open
 tom.hideturtle()
 
 #these two lines are for saving the image
